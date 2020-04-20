@@ -1,24 +1,35 @@
 const convBtn = document.querySelector('.conv');
 const resetBtn = document.querySelector('.reset');
-const swapBtn = document.querySelector('.swap');
+const swapBtn = document.querySelector('.change');
 const firstTemp = document.querySelector('.one');
 const secTemp = document.querySelector('.two');
-const number = document.querySelector('.converter');
+const number = document.querySelector('#converter');
 const result = document.querySelector('.result');
 
 let celsius;
 let fahrenheit;
 
-convBtn.addEventListener('click', function(){
 
-});
 
-resetBtn.addEventListener('click', function(){
 
-});
+//resetBtn.addEventListener('click', function(){
 
-swapBtn.addEventListener('click', function(){
+//});
 
-});
-// T(°F) = T(°C) × 1.8 + 32 
-// T(°C) = (T(°F) - 32) / 1.8
+let swap = () => {
+    if (firstTemp.innerText === "°C") {
+        firstTemp.innerText = "°F";
+        secTemp.innerText = "°C";
+    } else {
+        firstTemp.innerText = "°C";
+        secTemp.innerText = "°F";
+    };
+};
+
+swapBtn.addEventListener('click', swap);
+
+
+
+//swapBtn.addEventListener('click', function(){
+
+//});
