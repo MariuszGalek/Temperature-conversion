@@ -31,12 +31,9 @@ let conversion = () => {
             fToCel();
         };
     } else {
-        result.innerText = "Enter some number!";
+        result.innerText = "Enter a number!";
     };
 };
-//resetBtn.addEventListener('click', function(){
-
-//});
 
 let swap = () => {
     if (firstTemp.innerText === "°C") {
@@ -52,3 +49,7 @@ let swap = () => {
 
 convBtn.addEventListener('click', conversion);
 swapBtn.addEventListener('click', swap);
+resetBtn.addEventListener('click', function(){
+    number.value = '';
+    result.innerText = '';
+});
